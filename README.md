@@ -21,7 +21,7 @@ const gameData = window.__game.renderer.gl.domElement.offsetParent.attributes[0]
 ### 💰 修改餘額
 可自行修改金額數值：
 ```javascript
-window.__game.renderer.gl.domElement.offsetParent.attributes[0].ownerDocument.defaultView.__xinyi.W.taxis.ctx.state.data.money = 999999;
+(() => { const v = window.__game?.renderer?.gl?.domElement?.ownerDocument?.defaultView || window; const findCtx = (o, d = 0) => { if (!o || d > 5 || typeof o !== 'object') return null; if (o.ctx?.state?.data) return o.ctx; for (let k in o) { try { let r = findCtx(o[k], d + 1); if (r) return r; } catch (e) {} } return null; }; const ctx = findCtx(v.__xinyi) || findCtx(window); if (ctx?.state?.data) { ctx.state.data.money = 999999; } })();
 ```
 注：若金額超過一定限制，將會遭官方收回。
 ### 🎯 解鎖全任務
