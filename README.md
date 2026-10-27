@@ -14,7 +14,7 @@ const gameData = window.__game.renderer.gl.domElement.offsetParent.attributes[0]
 ## 二、修改代碼教學
 - ### 步驟一：於遊戲畫面上 **點擊右鍵 -> 檢查** 或是 **按下F12**。
 - ### 步驟二：於最上排之選單選擇 **Console**。
-- ### 步驟三 (若以設定可略)：於輸入區輸入 **allow pasting** 
+- ### 步驟三 (若以設定可略)：於輸入區輸入 **allow pasting**。
 - ### 步驟四：將下方之參考代碼貼上輸入區並按下 **Enter**。
 ## 三、參考代碼
 
